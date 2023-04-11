@@ -1,0 +1,14 @@
+{
+  "index": {
+    "type": "page",
+    "title": "Miru",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "文档"
+  }
+}
