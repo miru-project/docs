@@ -116,7 +116,7 @@ import docsCardDark from "../public/assets/card-1.dark.png";
     <h1 className="headline">A Multi-Source Media <br /> Management Library.</h1>
     <p className="subtitle"> 支持视频、漫画、小说扩展源的多功能播放器<br />开源，永久免费</p>
     <p className="subtitle">
-      <Link className={cn(styles.cta,"mr-2")} href="/docs">开始使用 <span>→</span></Link>
+      <Link className={cn(styles.cta,"mr-2")} href="/docs/start-using">开始使用 <span>→</span></Link>
     </p>
   </div>
 
@@ -322,7 +322,7 @@ import docsCardDark from "../public/assets/card-1.dark.png";
   <div className="features-container">
     <div className="content-container">
       <Features>
-        <Feature index={0} large centered id="docs-card" href="/docs/docs-theme/start">
+        <Feature index={0} large centered id="docs-card" href="/docs/start-using">
           <Image src={docsCard} alt="Background" loading="eager" />
           <Image src={docsCardDark} alt="Background (Dark)" loading="eager" />
           <h3>支持在线使用 <br className="show-on-mobile"/>现在就开始</h3>
@@ -405,7 +405,7 @@ import docsCardDark from "../public/assets/card-1.dark.png";
             }}
           >暗色模式 <br/>原生支持</motion.h3>
         </Feature>
-        <Feature index={3} href="/docs/guide/i18n">
+        <Feature index={3} >
           <h3>支持多语言</h3>
           <p className='mb-4'>Miru多语言功能，它可以让你根据你的偏好和需求，选择不同的语言来观看视频、漫画、小说。</p>
           <I18n/>
