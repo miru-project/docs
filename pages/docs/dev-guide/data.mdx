@@ -1,0 +1,79 @@
+# 数据格式
+
+## 方法传入的数据参数
+
+```javascript
+// 最近更新
+latest(page: number)
+
+// 搜索
+search(kw: string, page: number)
+
+// 获取详情
+detail(url: string)
+
+// 观看
+watch(url: string)
+
+// 检查更新剧集/章节 返回 string
+checkUpdate(url: string)
+
+// 卸载时调用
+unload() { }
+```
+
+## 方法返回数据
+
+```javascript
+
+// search 和 latest 方法返回的数据
+export interface ListItem {
+  title: string;
+  url: string;
+  cover: string;
+  desc?: string;
+  update?: string;
+}
+
+// detail 方法返回的数据
+export interface Detail {
+  title: string;
+  cover: string;
+  desc?: string;
+  metadata?: {
+    [key: string]: string;
+  };
+  // 选集
+  episodes?: Episode[];
+}
+
+// 章节数据
+export interface Episode {
+  title: string;
+  urls: {
+    name: string;
+    url: string;
+  }[]
+}
+
+// 影视扩展 watch 方法返回的数据
+export interface BangumiWatch {
+  type: "hls" | "mp4";
+  url: string;
+}
+
+// 漫画扩展 watch 方法返回的数据
+export interface MangaWatch {
+  urls: string[];
+}
+
+// 小说扩展 watch 方法返回的数据
+export interface FikushonWatch {
+  // 段落
+  content: string[]
+  title: string
+  // 副标题
+  subtitle: string
+}
+
+```
