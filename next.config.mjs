@@ -13,6 +13,9 @@ const withNextra = nextra({
 
 export default withNextra({
   reactStrictMode: true,
+  images: {
+    unoptimized: true
+  },
   eslint: {
     // Eslint behaves weirdly in this monorepo.
     ignoreDuringBuilds: true
