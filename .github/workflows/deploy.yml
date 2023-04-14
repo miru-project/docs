@@ -41,7 +41,7 @@ jobs:
           npx next export
       - name: Add CNAME
         run: |
-          echo "mog.js.org" > out/CNAME
+          echo "miru.js.org" > out/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
