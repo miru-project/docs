@@ -15,7 +15,9 @@ import { Callout, Steps } from "nextra-theme-docs";
 
 ### 编写元数据
 
-    在扩展文件中编写元数据，元数据是一个以 `// ==MiruExtension==` 开头 `// ==/MiruExtension==`结束的注释，包含了扩展的基本信息，例如包名、版本、作者、描述等，例如：
+    元数据中包含了扩展的基本信息，例如包名、版本、作者、描述等。在扩展文件中编写元数据，必须在元数据开始与结束使用 `// ==MiruExtension==` 注释。
+    
+    元数据示例：
     ```text
     // ==MiruExtension==
     // @name  Extension Name
@@ -28,10 +30,20 @@ import { Callout, Steps } from "nextra-theme-docs";
     // @webSite https://xxx.xxx.xxx/
     // ==/MiruExtension==
     ```
+
     <Callout>
        其中 `@name`、`@version`、`@webSite`、`@package`、`@type` 为必填项，其他为可选项。
        `@webSite` 是扩展的目标地址
     </Callout>
+
+    `@type` 是一个必填项，用于说明扩展的类型。
+    | @type |          |      |
+    | :-:   | :-:      | :-:  |
+    |       | bangumi  | 动画 |
+    |       | manga    | 漫画 |
+    |       | fikushon | 小说 |
+
+
 
 ### 继承 Extension 类
 
@@ -76,9 +88,9 @@ import { Callout, Steps } from "nextra-theme-docs";
          关于请求可以参考 [umi-request](https://github.com/umijs/umi-request/blob/master/README.md)
     </Callout>
 
-### 提交到 `Miru 官方仓库`
+### 提交到 `Miru 扩展仓库`
 
-    请使用 `PR` 的方式来提交你的扩展到 `Miru 官方仓库`，提交的 `PR` 需要包含你的扩展文件且**不需要** `index.json` 文件。
+    请使用 `PR` 的方式来提交你的扩展到 `Miru 扩展仓库`，提交的 `PR` 需要包含你的扩展文件且**不需要** `index.json` 文件。
 
 </Steps>
 
