@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<article class="flex not-content" aria-labelledby="about-astro-heading">
+  <small id="about-astro-heading">
+    {title}
+    <span class="sr-only">Miru</span>
+  </small>
+
+  <!--?xml version="1.0" encoding="UTF-8"?-->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115 50">
+    <defs>
+      <style>
+        .cls-1 {
+          fill: none;
+          stroke: var(--sl-color-white);
+          stroke-width: 2px;
+        }
+      </style>
+    </defs>
+    <g id="g1">
+      <polyline
+        id="gge232"
+        class="cls-1"
+        points="2.5 47.5 2.5 2.5 22.5 2.5 27.5 12.5 32.5 2.5 52.5 2.5 52.5 47.5 37.5 47.5 37.5 17.5 27.5 32.5 17.5 17.5 17.5 47.5 2.5 47.5"
+      ></polyline>
+      <polyline
+        id="gge235"
+        class="cls-1"
+        points="52.5 17.5 52.5 47.5 82.5 47.5 67.5 17.5 52.5 17.5"></polyline>
+      <polyline
+        id="gge238"
+        class="cls-1"
+        points="52.5 2.5 52.5 17.5 82.5 17.5 82.5 2.5 52.5 2.5"></polyline>
+      <polyline
+        id="gge241"
+        class="cls-1"
+        points="82.5 2.5 82.5 47.5 112.5 47.5 112.5 2.5 97.5 2.5 97.5 32.5 97.5 2.5 82.5 2.5"
+      ></polyline>
+    </g>
+  </svg>
+  <slot />
+</article>
+
+<style>
+  article {
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-block: 5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  article > :global(*) {
+    max-width: 50ch;
+  }
+  small {
+    color: var(--sl-color-gray-3);
+  }
+  svg {
+    width: 10rem;
+    margin: .8rem;
+  }
+</style>

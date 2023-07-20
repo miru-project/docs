@@ -1,0 +1,104 @@
+---
+title: 开始开发
+description: 开始使用 Miru
+---
+
+开发扩展需要明白 Javascript 的正则表达式如果你不熟悉正则表达式可以先学习一下 《[正则表达式和字符串的方法](https://zh.javascript.info/regexp-methods)》 和 《[正则表达式 30 分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)》。
+
+本文档默认你已经按照 [开发环境](/developer/1-environment/) 配置好了开发环境。
+
+## 快速开始
+
+### 创建扩展文件
+
+请在 Windows 的扩展加载目录中创建一个和包名一样的 js 文件。
+
+:::tip
+你可以切换到扩展页面
+![src/assets/images/extension/1689866233139.png](/src/assets/images/extension/1689866233139.png)
+再点击右上角的导入按钮
+![src/assets/images/extension/1689866249425.png](/src/assets/images/extension/1689866249425.png)
+就可以快速的定位到扩展目录
+:::
+
+### 编写元数据
+
+元数据中包含了扩展的基本信息，例如包名、版本、作者、描述等。在扩展文件中编写元数据，必须在元数据开始与结束使用 `// ==MiruExtension==` 注释。
+
+元数据示例：
+
+```text
+
+// ==MiruExtension==
+// @name  Extension Name
+// @version v0.0.1
+// @author Xxxx
+// @lang zh-cn
+// @icon https://xxx.xxx.xxx/xxx.png
+// @package xxx.xxx.xxx
+// @type bangumi
+// @webSite https://xxx.xxx.xxx/
+// ==/MiruExtension==
+
+```
+
+:::tip
+其中 `@name`、`@version`、`@webSite`、`@package`、`@type` 为必填项，其他为可选项。
+`@webSite` 是扩展的目标地址 `@package` 必须和扩展文件名一致。
+
+`@type` 是一个必填项，用于说明扩展的类型。
+| @type | | |
+| :-: | :-: | :-: |
+| | bangumi | 动画 |
+| | manga| 漫画 |
+| | fikushon | 小说 |
+:::
+
+### 继承 Extension 类
+
+在扩展文件中暴露一个 类 并继承 `Extension` 类，例如：
+
+```javascript
+export default class extends Extension {}
+```
+
+### 重写扩展内的方法
+
+在扩展类中重写 `Extension` 类中的方法，例如：
+
+```javascript
+export default class extends Extension {
+  async latest() {
+    // 最近更新
+  }
+  async search() {
+    // 搜索
+  }
+  async detail() {
+    // 详情
+  }
+  async watch() {
+    // 观看
+  }
+}
+```
+
+其中返回的数据都得按照 [数据格式](/developer/3-data/) 返回。
+请求数据可以使用 `this.request` 方法，例如：
+
+```javascript
+const res = await this.request({
+  url: "/xxx",
+  method: "GET",
+});
+```
+
+`this.request` 是通过代理的请求 如果不使用 `this.request` 将可能收到跨域错误（仅 Web）。
+
+### 提交到 `Miru 扩展仓库`
+
+请使用 `PR` 的方式来提交你的扩展到 `Miru 扩展仓库`，提交的 `PR` 需要包含你的扩展文件且**不需要** `index.json` 文件。
+
+## 例子
+
+可以前往 [Miru 官方仓库](https://miru-repo.0n0.dev)
