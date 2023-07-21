@@ -16,6 +16,29 @@ hero:
       icon: external
 ---
 
+import ColorCard from "@components/ColorCard.astro";
+import myImage from "@assets/images/screenshot.png";
+
+<ColorCard title="New Miru" image={myImage} description="使用 Flutter 开发，扩展使用 QuickJS 引擎驱动，目前正在逐步实现功能">
+
+🎉 利用 Miru 的扩展系统，可以轻松的添加新的源
+
+🦋 使用对应系统 UI 设计语言，让你的体验更加统一，不割裂
+
+📱 支持多平台，包括 Android、Windows、Web。
+
+🌐 支持自定义扩展仓库与代理。
+
+📦 官方扩展仓库提供视频源，无需编写任何扩展即可使用。
+
+📜 使用 TMDB 获取影视信息，支持多语言。
+
+📚 支持在线观看多种视频、漫画、小说源，实现多平台的统一。
+
+📖 支持保存观看进度，不在担心看到一半的视频、漫画、小说找不到进度。
+
+</ColorCard>
+
 import AboutMiru from "../../components/AboutMiru.astro";
 
 <AboutMiru title="Brought to you by">
