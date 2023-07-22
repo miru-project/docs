@@ -1,0 +1,48 @@
+---
+title: Miru
+description: Get Started
+template: splash
+hero:
+  tagline: Free, Open Source  A multifunctional media entertainment application that supports video, comics, and novel expansion sources，Support Android、Windows、Web.
+  image:
+    file: ../../../assets/images/kanban.png
+  actions:
+    - text: Get Started
+      link: /download/
+      icon: right-arrow
+      variant: primary
+    - text: Development docs
+      link: /developer/
+      icon: external
+---
+
+import ColorCard from "@components/ColorCard.astro";
+import myImage from "@assets/images/screenshot.png";
+
+<ColorCard title="New Miru" image={myImage} description="It is being developed using Flutter and utilizes the QuickJS engine for expansion. The functionality is currently being implemented gradually.">
+
+🎉 With Miru's extension system, it's easy to add new sources.
+
+🦋 It utilizes the corresponding system UI design language to provide a consistent and seamless user experience.
+
+📱 It supports multiple platforms, including Android, Windows, and Web.
+
+🌐 It supports custom extension repositories and proxies.
+
+📦 The official extension repository provides video sources that can be used without writing any extensions.
+
+📜 It uses TMDB to fetch movie and TV show information, supporting multiple languages.
+
+📚 It supports online streaming of various video, comic, and novel sources, providing a unified experience across multiple platforms.
+
+📖 It supports saving watch progress, so you don't have to worry about losing your progress in the middle of a video, comic, or novel.
+
+</ColorCard>
+
+import AboutMiru from "@components/AboutMiru.astro";
+
+<AboutMiru title="Brought to you by">
+  
+AGPLv3 © 2023 Miru Project.
+
+</AboutMiru>
