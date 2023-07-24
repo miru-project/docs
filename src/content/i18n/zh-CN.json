@@ -1,0 +1,21 @@
+{
+  "skipLink.label": "转到内容",
+  "search.label": "搜索",
+  "search.shortcutLabel": "（按 / 开始搜索）",
+  "search.cancelLabel": "取消",
+  "search.devWarning": "搜索仅在生产版本中可用。 \n尝试构建并在本地进行预览和测试该网站。",
+  "themeSelect.accessibleLabel": "切换主题",
+  "themeSelect.dark": "深色",
+  "themeSelect.light": "浅色",
+  "themeSelect.auto": "自动",
+  "languageSelect.accessibleLabel": "切换语言",
+  "menuButton.accessibleLabel": "目录",
+  "sidebarNav.accessibleLabel": "Main",
+  "tableOfContents.onThisPage": "本页目录",
+  "tableOfContents.overview": "总览",
+  "i18n.untranslatedContent": "此内容还没有支持您的语言版本.",
+  "page.editLink": "编辑页面",
+  "page.lastUpdated": "最后更新:",
+  "page.previousLink": "上一页",
+  "page.nextLink": "下一页"
+}
