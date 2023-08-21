@@ -41,6 +41,9 @@ export default defineConfig({
                     autogenerate: {
                         directory: "developer",
                     },
+                    translations: {
+                        'en': 'Developer Guide'
+                    }
                 },
             ],
             defaultLocale: 'root',
