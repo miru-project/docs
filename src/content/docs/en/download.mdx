@@ -1,0 +1,47 @@
+---
+title: Start Using
+description: Start Using Miru
+template: splash
+---
+
+You can download the installation package or use Miru directly on the web page.
+
+#### Client
+
+import {Card, CardGrid} from "@astrojs/starlight/components";
+
+import DownloadView from "@components/en/DownloadView";
+import CardButton from "@components/CardButton.astro";
+
+<Card>
+    <DownloadView client:load/>
+</Card>
+
+#### Web
+
+:::caution[Warning]
+Due to the limitations of the webpage, the functions that can be experienced are limited. It is best to use the [client version](#client).
+The web version is currently being refactored.
+:::
+
+<CardGrid>
+    <Card title="Web deployment tutorial">WIP</Card>
+    <Card title="Use instances directly">
+        You can visit [https://miru.0u0.ren](https://miru.0u0.ren) to use the ready-made Miru instance.
+    </Card>
+</CardGrid>
+
+### Documentation
+
+<CardGrid>
+    <CardButton title="User Usage Documents">
+        Can help you get started with Miru quickly. (WIP)
+    </CardButton>
+    <CardButton title="Extensions Development Documents" href="/en/developer/">
+        Can help you develop Miru extensions.
+    </CardButton>
+</CardGrid>
+
+### More
+
+You can go to the [Telegram group](https://t.me/MiruChat) for more help.
