@@ -1,0 +1,84 @@
+---
+title: Data Formats
+---
+
+## Data Parameters for Methods
+
+```javascript
+// Recently Updated
+latest(page: number)
+
+// Search
+search(kw: string, page: number)
+
+// Get Details
+detail(url: string)
+
+// Watch
+watch(url: string)
+
+// Check for Updates for Episodes/Chapters (returns string)
+checkUpdate(url: string)
+
+// Called when unloading
+unload() { }
+
+// Called when loading
+load(){}
+```
+
+## Data Returned by Methods
+
+```javascript
+
+// Data returned by search and latest methods
+export interface ListItem {
+  title: string;
+  url: string;
+  cover: string;
+  desc?: string;
+  update?: string;
+}
+
+// Data returned by detail method
+export interface Detail {
+  title: string;
+  cover: string;
+  desc?: string;
+  metadata?: {
+    [key: string]: string;
+  };
+  // Episodes
+  episodes?: Episode[];
+}
+
+// Episode data
+export interface Episode {
+  title: string;
+  urls: {
+    name: string;
+    url: string;
+  }[]
+}
+
+// Data returned by watch method for video extensions
+export interface BangumiWatch {
+  type: "hls" | "mp4";
+  url: string;
+}
+
+// Data returned by watch method for manga extensions
+export interface MangaWatch {
+  urls: string[];
+}
+
+// Data returned by watch method for novel extensions
+export interface FikushonWatch {
+  // Paragraph
+  content: string[]
+  title: string
+  // Subtitle
+  subtitle: string
+}
+
+```
