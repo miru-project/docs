@@ -2,6 +2,17 @@ import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
 
+export const locales = {
+    root: {
+        label: '简体中文',
+        lang: 'zh-CN',
+    },
+    en: {
+        label: 'English',
+        lang: 'en',
+    }
+}
+
 // https://astro.build/config
 export default defineConfig({
     integrations: [
@@ -33,16 +44,7 @@ export default defineConfig({
                 },
             ],
             defaultLocale: 'root',
-            locales: {
-                root: {
-                    label: '简体中文',
-                    lang: 'zh-CN',
-                },
-                en: {
-                    label: 'English',
-                    lang: 'en',
-                }
-            }
+            locales: locales
         }),
         react(),
     ],
